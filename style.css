@@ -374,11 +374,6 @@ label {font-weight: 400;}
 	padding-top: 0px;
 }
 
-.toolbarContainer
-{
-	/*width: 210px;*/
-}
-
 .logo
 {
 	text-align:center;
@@ -880,10 +875,6 @@ background: #d79b1e5c;}
 	pointer-events: none;
 }
 
-.mean-expand
-{
-	
-}
 /*----------------------------------------*/
 /*  3. Slider Area
 /*----------------------------------------*/
@@ -1274,7 +1265,7 @@ p.old-price, p.special-price {
 }
 
 .post-grid .layer-content {
-	 #background-color: #bd7f2f;
+	 background-color: #bd7f2f;
 }
 
 .post-grid .layer-content a:hover
@@ -1294,6 +1285,10 @@ p.old-price, p.special-price {
 
 .post-info {
 	display: none;
+}
+
+.product_list_widget li img {
+    width:110px !important;
 }
 
 /*Social Media*/
