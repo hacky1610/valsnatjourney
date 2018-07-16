@@ -2192,7 +2192,6 @@ h3.comment-reply-title::before,
 }
 .widget_categories li a,
 .widget_archive li a{
-  padding-left: 20px;
   position: relative;
   display: block;
 }
@@ -2208,19 +2207,11 @@ h3.comment-reply-title::before,
   position: absolute;
  
 }
-.widget_recent_comments li:after {
-  content: "\f0e5";
-  left: 0px;
-  top: 14px;
-}
+
 .widget_archive li a{
 	padding-left:25px;	
 }
-.widget_categories li a:after {
-  content: "\f105";
-  left: 0px;
-  top: 14px;
-}
+
 .widget_archive li a:after {
 	content: "\f115";
 	left: 0px;
@@ -4844,8 +4835,9 @@ input.minus {
 }
 .entry-content ul{
 	padding-left:20px;
-	list-style:circle;
-	padding-bottom:15px;
+	list-style:square;
+    padding-bottom:15px;
+    
 }
 .entry-content ol{
 	padding-left:20px;
