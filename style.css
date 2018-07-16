@@ -178,7 +178,7 @@ th,td  {
 p, li { 
 	margin:0 0 10px;
 	/*font-family: "Lato",sans-serif;*/
-	font-family: font-family: Arial,Helvetica Neue,Helvetica,sans-serif;
+	font-family: Arial,Helvetica Neue,Helvetica,sans-serif;
 }
 strong { font-weight:bold; }
 address { font-style:normal; line-height:25px;margin: 0 ;}
@@ -1116,7 +1116,6 @@ background: #bea42e87;}
 }
 .add-to-links li {
     display: inline;
-    float: left;
 }
 .single-product-item .button-actions .add-to-links li a.link-wishlist {
     transition-delay: 0.3s;
@@ -1828,7 +1827,6 @@ ul.social-link a i {color: #d1d1d1}
 .service-home-four .single-service span, .shipping .single-service span {
     color: #69686c;
     display: inline-block;
-    float: left;
     font-size: 35px;
     height: 45px;
     line-height: 45px;
@@ -1849,7 +1847,6 @@ ul.social-link a i {color: #d1d1d1}
 }
 form#search-form-four {
     display: inline-block;
-    float: right;
     margin-right: 4px;
     padding: 10px 0;
     position: relative;
@@ -3283,7 +3280,6 @@ h3.login-title {
     border: 2px solid #bea42e;
     color: #bea42e;
     display: inline-block;
-    float: right;
     font: 1em/33px "Lato",sans-serif;
     height: 38px;
     margin-top: 32px;
@@ -3681,7 +3677,6 @@ h3.login-title {
 #blog-search .submit:hover {color: #bea42e}
 .sidebar-content .post-thumb {
     display: inline-block;
-    float: left;
     width: 35%;
 }
 .sidebar-content.post ul {margin-top: 15px}
@@ -4025,7 +4020,6 @@ a.read-button:hover {
     outline: medium none;
     padding: 0 12px;
     transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
-    vertical-align: middle;
     width: 100%;
 }
 .user-comment-form-area .form-list .fields .field .input-box textarea, .user-comment-form-area .form-list .fields .field.comment {
