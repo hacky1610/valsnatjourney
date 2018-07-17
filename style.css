@@ -2366,7 +2366,18 @@ h3.comment-reply-title{
 }
 
 .products .type-product {
-	margin-bottom: 0 !important;
+	margin-bottom: 15px!important;
+}
+
+/*Hack -> sonst ist das letzte Element verrutscht*/
+.woocommerce ul.products.columns-3 li.product, .woocommerce-page ul.products.columns-3 li.product
+{
+	width:28%;
+}
+
+
+ul.products li.product .product_type_variable{
+	display:none; /*Hide Choose option button*/
 }
 
 /*hide ordering*/
@@ -2682,6 +2693,14 @@ h3.comment-reply-title{
 .variable-item.selected
 {
 	border: 3px solid #af6f04 !important;
+	width: 35px;
+	height: 35px;
+	margin-top: 1px !important;
+}
+
+.variable-item.selected span
+{
+	font-weight:600;
 }
 
 .sku_wrapper {
@@ -4437,7 +4456,8 @@ ul.comment-list ul{
 	height: auto!important;
 	margin-left: auto;
 	margin-right: auto;
-	display: table;
+    display: table;
+    margin-bottom: 3px;
 }
 
 .grid-items>div {
