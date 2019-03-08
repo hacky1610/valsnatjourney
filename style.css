@@ -400,6 +400,14 @@ label {font-weight: 400;}
 .header-main {
 	display:none;
 }
+
+.vnj-container {
+  width: 80%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
 /*----------------------------------------*/
 /*  2.2.1 Logo
 /*----------------------------------------*/
@@ -729,11 +737,11 @@ background: #ffffff;}
     font-family: "Raleway",Arial,sans-serif;
     font-weight: 600;
     letter-spacing: 1px;
-    font-size: 18px;
+    font-size: 21px;
     text-decoration: none;
     text-transform: uppercase;
     transition: all 800ms cubic-bezier(0.4, 0, 0.2, 1) 0s;
-    padding: 20px;
+    padding: 0.7vw;
     position: relative;
 	padding-top: 35px;
 	padding-bottom: 30px;
@@ -5288,6 +5296,28 @@ a.tcb-button-link:Hover{
     transition: opacity 1.0s !important; 
     opacity: 1;
 }
+
+.lp-profile-header {
+  background: #c19c55 !important;
+}
+
+.lp-user-profile .profile-name {
+  width: 160px;
+}
+
+.learn-press-form-login button {
+  width: 100px;
+  height: 30px;
+  color: black;
+  font-size: 15px;
+}
+
+
+
+.zoomImg {
+	visibility: hidden;
+}
+
 
 
 

@@ -61,26 +61,26 @@
 								<img border="0" title="Instagram" src="<?php echo $iconsource . 'instagram_icon.png' ?>">
 							</a>
 							</a>
-							<a target="_blank" href="<?php echo $siteAddress . '/contact' ?>" >
+							<a target="_blank" href="<?php echo ${$siteAddress . esc_html_e( '/contact', 'hamzahshop' )};  ?>" >
 								<img border="0" title="Contact" src="<?php echo $iconsource . 'mail_icon.png' ?>">
 							</a>
 						</div>
-						
+
 						<div class="vnj-center">		
-							<a href="<?php echo $siteAddress . '/mein-konto' ?>">Mon compte</a> | 
-							<a href="<?php echo $siteAddress . '/donner' ?>">Soutenez-moi</a> 
-							
+							<a href="<?php echo ${$siteAddress . esc_html_e( '/mein-konto', 'hamzahshop' )};  ?>"><?php esc_html_e( 'Mon compte', 'hamzahshop' ); ?></a> | 
+							<a href="<?php echo ${$siteAddress . esc_html_e( '/donner', 'hamzahshop' )}; ?>"><?php esc_html_e( 'Soutenez-moi', 'hamzahshop' ); ?></a> 
 						</div>
+
 						<div class="vnj-center">
-							<a href="<?php echo $siteAddress . '/politique-modele-de-confidentialite' ?>">Politique modèle de confidentialité </a> 
+							<a href="<?php echo ${$siteAddress . esc_html_e( '/politique-modele-de-confidentialite', 'hamzahshop' )};  ?>"><?php esc_html_e( 'Politique modèle de confidentialité', 'hamzahshop' ); ?> </a> 
 							(<a href="<?php echo $siteAddress . '/datenschutzerklaerung' ?>">Datenschutzerklärung</a>)
 						</div>
 						<div class="vnj-center">	
-							<a href="<?php echo $siteAddress . '/agb' ?>">AGB</a> |					
-							<a href="<?php echo $siteAddress . '/impressum' ?>">Impressum</a> 
+							<a href="<?php echo ${$siteAddress . esc_html_e( '/agb', 'hamzahshop' )};  ?>"><?php esc_html_e( 'AGB', 'hamzahshop' ); ?> </a> |					
+							<a href="<?php echo ${$siteAddress . esc_html_e( '/impressum', 'hamzahshop' )};  ?>"><?php esc_html_e( 'Impressum', 'hamzahshop' ); ?></a> 
 						</div>
 						<div class="vnj-center">	
-							<a class="gaoo-opt-out google-analytics-opt-out" href="javascript:gaoop_analytics_optout();">Cliquez ici pour optout google analytics</a>
+							<a class="gaoo-opt-out google-analytics-opt-out" href="javascript:gaoop_analytics_optout();"><?php esc_html_e( 'Cliquez ici pour optout google analytics', 'hamzahshop' ); ?></a>
 						</div>
 						
 					</div>  

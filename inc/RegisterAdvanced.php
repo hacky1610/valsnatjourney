@@ -8,7 +8,7 @@ use \DrewM\MailChimp\MailChimp;
 
 
 /*Queue: automations/4ab952b6e0/emails/4a1e7deda7/queue*/
-function Register($mail,$fname,$pays,$sendMail,$list,$queue,$thankyou) {
+function Register($mail,$fname,$number,$facebook,$time,$sendMail,$list,$queue,$thankyou) {
    $MailChimp = new MailChimp('20908b3fa54b62ed523a94cb430eab8f-us13');
    
    $result = $MailChimp->post("lists/" . $list . "/members", [
@@ -16,7 +16,9 @@ function Register($mail,$fname,$pays,$sendMail,$list,$queue,$thankyou) {
 				'merge_fields' => 
 				[
 					'FNAME' => $fname,
-					'PAYS' => $pays
+          'NUMBER' => $number,
+          'FACEBOOK' => $facebook,
+          'TIME' => $time
 				],
 				'status'        => 'subscribed',
 			]);
@@ -45,13 +47,15 @@ function Register($mail,$fname,$pays,$sendMail,$list,$queue,$thankyou) {
 	
 $mail = $_POST["EMAIL"];
 $fname = $_POST["FNAME"];
-$pays = $_POST["PAYS"];
+$number = $_POST["NUMBER"];
+$facebook = $_POST["FACEBOOK"];
+$time = $_POST["TIME"];
 $sendMail = $_POST["SENDMAIL"];
 $queue = $_POST["QUEUE"];
 $list = $_POST["LIST"];
 $thankyou = $_POST["THANKYOU"];
 
-Register($mail,$fname,$pays,$sendMail,$list,$queue,$thankyou);
+Register($mail,$fname,$number,$facebook,$time,$sendMail,$list,$queue,$thankyou);
 	
 	
 	

@@ -136,12 +136,14 @@
 		var mainmenu = document.getElementsByClassName('mainmenu-area')[0];
 		var cartContainer = document.getElementsByClassName('cart-container')[0];
 		var headerCart = document.getElementsByClassName('header-r-cart')[0];
+		var langSwitcher = document.getElementsByClassName('sharonne_language_switcher')[0];
 		var currency = document.getElementById('alg_currency_selector');
 		  
 		if (distanceY > shrinkOn) {
 				mainmenu.classList.add("mainmenu-area-small");
 				cartContainer.classList.add("cart-container-small");
 				headerCart.classList.add("header-r-cart-small");
+				//langSwitcher.classList.add("sharonne_language_switcher_small");
 				currency.classList.add("alg_currency_selector_small");
 				for (var i = 0, len = navbar.children.length; i < len; i++) {
 					navbar.children[i].firstElementChild.classList.add("vnj-small");
@@ -150,7 +152,8 @@
 				mainmenu.classList.remove("mainmenu-area-small");
 				cartContainer.classList.remove("cart-container-small");
 				headerCart.classList.remove("header-r-cart-small");
-				currency.classList.remove("alg_currency_selector_small");
+                currency.classList.remove("alg_currency_selector_small");
+				//langSwitcher.classList.remove("sharonne_language_switcher_small");
 				for (var i = 0, len = navbar.children.length; i < len; i++) {
 					navbar.children[i].firstElementChild.classList.remove("vnj-small");
 				}

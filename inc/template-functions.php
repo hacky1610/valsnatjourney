@@ -110,7 +110,25 @@ function hamzahshop_custom_min_cart(){ ?>
 add_action( 'hamzahshop_custom_min_cart', 'hamzahshop_custom_min_cart' );
 endif;
 
-
+if ( !function_exists('sharonne_language_switcher')):
+	function sharonne_language_switcher(){ 
+	$translations = pll_the_languages(array('raw'=>1));	
+	?>
+	
+	<div class="sharonne_language_switcher">		
+		<?php 
+			foreach ($translations as $lang){
+				echo '<a href="' . $lang['url'] . '">';
+				echo '<img src="/wp-content/uploads/' . $lang['slug'] . '.png" >';
+				echo '</a>';
+			}
+		
+		?>
+	</div>
+	
+	<?php }
+	add_action( 'sharonne_language_switcher', 'sharonne_language_switcher' );
+endif;
 
 if ( !function_exists('sharonne_language_switcher')):
 function sharonne_language_switcher(){ 
@@ -157,11 +175,35 @@ function sharonne_account_button(){
 		echo '<div class="col-lg-1 col-md-1 col-sm-4 col-xs-1 account-container">';
 		echo '<div class="sharonne_account_container">';
 		if ( isUserLoggedIn() ) {
-			echo '<a href="' . getAcountLink() . '"><span class="glyphicon glyphicon-user sharonne-account-pic"></span></a>';
-		}
+      ?>
+			<a type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="<?php getAcountLink();   ?>">
+        <span class="glyphicon glyphicon-user sharonne-account-pic"></span>
+      </a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">Action</a>
+        <a class="dropdown-item" href="#">Another action</a>
+        <a class="dropdown-item" href="#">Something else here</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="#">Separated link</a>
+     </div>
+      <?php
+    }
 		else
 		{
-			echo '<a href="' . getAcountLink() . '"><span class="glyphicon glyphicon-user sharonne-account-pic"></span></a>';
+      ?>
+      <div class="btn-group">
+        <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
+          <span class="glyphicon glyphicon-user sharonne-account-pic"></span>
+        </button>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="<?php getAcountLink();   ?>">Action</a>
+          <a class="dropdown-item" >Another action</a>
+          <a class="dropdown-item" >Something else here</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" >Separated link</a>
+        </div>
+      </div>
+      <?php
 		}
 		echo '</div>';
 		echo '</div>';

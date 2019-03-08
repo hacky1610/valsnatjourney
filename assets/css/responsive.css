@@ -204,7 +204,14 @@
 		    width: 40px;
 			    padding-left: 10px;
 				padding-top: 8px;
-	}
+    }
+
+    .sharonne_language_switcher
+    {
+        margin-top: 10px;
+    }
+    
+
 	
     .home-two-header ul.header-r-cart .mini-cart-content, .home-three-header ul.header-r-cart .mini-cart-content {
         left: -40px;

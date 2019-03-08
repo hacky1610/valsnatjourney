@@ -3,6 +3,15 @@ $( document ).ready(function() {
 	$("#vnj-jewellery-image").on("click", ShowJewellery);
 	$("#vnj-shirt-image").on("click", ShowShirts);
     $("#vnj-ebook-image").on("click", ShowEbooks);
+    $(".lp-button").removeClass("button");
+    $(".lp-button").addClass("btn btn-primary");
+    $(".dropdown-toggle").dropdown();
+
+    if (!$("body").hasClass("logged-in")) {
+      $("#menu-item-2170").hide();
+    }
+    
+
 });
 
 function getCookie(cname) {
