@@ -13,7 +13,7 @@
  * @see 	https://docs.woocommerce.com/document/template-structure/
  * @author  WooThemes
  * @package WooCommerce/Templates
- * @version 3.3.0
+ * @version 3.5.2
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -33,7 +33,6 @@ if ( $show_downloads ) {
 	wc_get_template( 'order/order-downloads.php', array( 'downloads' => $downloads, 'show_title' => true ) );
 }
 ?>
-
 <script type="text/javascript">
     $(window).on('load',function(){
        <?php 
@@ -60,9 +59,6 @@ if ( $show_downloads ) {
     </div>
   </div>
 </div>
-
-
-
 <section class="woocommerce-order-details">
 	<?php do_action( 'woocommerce_order_details_before_order_table', $order ); ?>
 
@@ -104,7 +100,7 @@ if ( $show_downloads ) {
 					?>
 					<tr>
 						<th scope="row"><?php echo $total['label']; ?></th>
-						<td><?php echo $total['value']; ?></td>
+						<td><?php echo ( 'payment_method' === $key ) ? esc_html( $total['value'] ) : $total['value']; ?></td>
 					</tr>
 					<?php
 				}
