@@ -20,7 +20,7 @@
             ?>
             
                
-                 <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="site-title"><img border="0" alt="W3Schools" src="https://vals-natural-journey.de/wp-content/uploads/logo.jpg" width="600" height="250"></a>
+                 <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="site-title"><img border="0" alt="" src="https://vals-natural-journey.de/wp-content/uploads/logo.jpg" width="600" height="250"></a>
              
              
                 
