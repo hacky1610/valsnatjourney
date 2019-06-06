@@ -8,7 +8,7 @@ use \DrewM\MailChimp\MailChimp;
 
 
 /*Queue: automations/4ab952b6e0/emails/4a1e7deda7/queue*/
-function Register($mail,$fname,$pays,$sendMail,$list,$queue,$thankyou) {
+function Register($mail,$fname,$pays,$sendMail,$list,$queues,$thankyou) {
    $MailChimp = new MailChimp('20908b3fa54b62ed523a94cb430eab8f-us13');
    
    $result = $MailChimp->post("lists/" . $list . "/members", [
@@ -28,14 +28,20 @@ function Register($mail,$fname,$pays,$sendMail,$list,$queue,$thankyou) {
 
 		if($sendMail == "true")
 		{
-			$result = $MailChimp->post($queue, [
+			$queueArr = explode(';',$queues);
+		
+			foreach ($queueArr as &$queue) {
+				$result = $MailChimp->post($queue, [
 					'email_address' => $mail
 				]);
 				
-			if($result["status"] == 400)
-			{
-				//print_r($result);
-			}	
+				if($result["status"] == 400)
+				{
+					//print_r($result);
+				}	
+			 }
+
+		
 		}
 		
 		echo "<script>document.location = '" . $thankyou . "';</script>";
