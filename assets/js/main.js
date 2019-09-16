@@ -137,7 +137,11 @@
 		var cartContainer = document.getElementsByClassName('cart-container')[0];
 		var headerCart = document.getElementsByClassName('header-r-cart')[0];
 		var langSwitcher = document.getElementsByClassName('sharonne_language_switcher')[0];
-		var currency = document.getElementById('alg_currency_selector');
+        var currency = document.getElementById('alg_currency_selector');
+        
+        if(mainmenu == undefined){
+            return;
+        }
 		  
 		if (distanceY > shrinkOn) {
 				mainmenu.classList.add("mainmenu-area-small");
