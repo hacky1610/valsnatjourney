@@ -5318,6 +5318,10 @@ a.tcb-button-link:Hover{
 	visibility: hidden;
 }
 
+/*Memberspace*/
+#__memberspace_memberlogin_button {
+	display:none;
+}
 
 
 
