@@ -35,7 +35,7 @@
 <!--End of Footer Widget Area-->
 <?php }?>
 
-<!-- Facebook Pixel Code -->
+<!-- Facebook Pixel Code
 <script>
   !function(f,b,e,v,n,t,s)
   {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -47,7 +47,7 @@
   'https://connect.facebook.net/en_US/fbevents.js');
   fbq('init', '454141548722862');
   fbq('track', 'PageView');
-</script>
+</script> -->
 <noscript><img height="1" width="1" style="display:none"
   src="https://www.facebook.com/tr?id=454141548722862&ev=PageView&noscript=1"
 /></noscript>
