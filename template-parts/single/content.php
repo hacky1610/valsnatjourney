@@ -10,6 +10,7 @@
 ?>
 <div class="single-blog no-margin">
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<script async defer data-pin-hover="true" data-pin-tall="true" data-pin-round="true" src="//assets.pinterest.com/js/pinit.js"></script>
 		<?php
             if ( is_single() ) :
            		 the_title( '<h1 class="entry-title blog-post-title">', '</h1>' );

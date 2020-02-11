@@ -82,6 +82,10 @@
 							<a target="_blank" href="<?php echo ${$siteAddress . esc_html_e( '/contact', 'hamzahshop' )};  ?>" >
 								<img border="0" title="Contact" src="<?php echo $iconsource . 'mail_icon.png' ?>">
 							</a>
+							<a target="_blank" href="https://www.pinterest.co.uk/valeriehackbarth/">
+								<img border="0" title="Contact" src="<?php echo $iconsource . 'pinterest_icon.png' ?>">
+							</a>
+
 						</div>
 
 						<div class="vnj-center">		
