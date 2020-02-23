@@ -177,7 +177,7 @@ function hamzahshop_scripts() {
 	#wp_enqueue_style( 'hamzahshop-meanmenu', get_template_directory_uri() . '/assets/css/meanmenu.css',array(), "9.2" );
 	wp_enqueue_style( 'hamzahshop-meanmenu', get_template_directory_uri() . '/assets/css/meanmenu.css',array(), filemtime(get_template_directory() . '/assets/css/meanmenu.css') );
 	
-	wp_enqueue_style( 'hamzahshop-style', get_stylesheet_uri(),array(),filemtime(get_template_directory() . '/style.css') );
+	wp_enqueue_style( 'hamzahshop-style2', get_template_directory_uri() . '/vals_style.css'); #,array(),filemtime(get_template_directory() . '/vals_style.css') );
 	wp_enqueue_style( 'hamzahshop-responsive', get_template_directory_uri() . '/assets/css/responsive.css' ,array(), filemtime(get_template_directory() . '/assets/css/responsive.css'));
 
 	wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/assets/js/bootstrap.js', array(), '20151215', true );
