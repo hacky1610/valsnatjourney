@@ -5323,9 +5323,41 @@ a.tcb-button-link:Hover{
 	display:none;
 }
 
+.memberspace-disabled-button {
+    background-color:grey !important;
+    transform:none;
+    pointer-events:none;
+}
+
+/*Product*/
 .product_title {
     display: inline-block;
 }
+
+/*Tooltips*/
+.vnj-tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+  }
+  
+  .vnj-tooltip .vnj-tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+  
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+  }
+  
+  .vnj-tooltip:hover .vnj-tooltiptext {
+    visibility: visible;
+  }
 
 
 

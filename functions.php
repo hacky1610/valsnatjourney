@@ -186,6 +186,7 @@ function hamzahshop_scripts() {
 	wp_enqueue_script('jquery-scrollUp', get_template_directory_uri().'/assets/js/jquery.scrollUp.js',0,0,true);
 	
 	wp_enqueue_script( 'hamzahshop.main', get_template_directory_uri() . '/assets/js/main.js', array(), '20151215', true );
+	wp_enqueue_script( 'vnj-memberspace', get_template_directory_uri() . '/assets/js/memberspace.js', array(), '20151216', true );
 
 
 
