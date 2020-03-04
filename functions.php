@@ -174,7 +174,6 @@ function hamzahshop_scripts() {
 	wp_enqueue_style( 'hamzahshop-Lato-fonts', '//fonts.googleapis.com/css?family=Lato:400,400italic,900,700,700italic,300' );
 	wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/assets/css/bootstrap.css' );
 	wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/assets/css/font-awesome.css' );
-	#wp_enqueue_style( 'hamzahshop-meanmenu', get_template_directory_uri() . '/assets/css/meanmenu.css',array(), "9.2" );
 	wp_enqueue_style( 'hamzahshop-meanmenu', get_template_directory_uri() . '/assets/css/meanmenu.css',array(), filemtime(get_template_directory() . '/assets/css/meanmenu.css') );
 	
 	wp_enqueue_style( 'hamzahshop-style2', get_template_directory_uri() . '/vals_style.css'); #,array(),filemtime(get_template_directory() . '/vals_style.css') );
@@ -187,14 +186,29 @@ function hamzahshop_scripts() {
 	
 	wp_enqueue_script( 'hamzahshop.main', get_template_directory_uri() . '/assets/js/main.js', array(), '20151215', true );
 	wp_enqueue_script( 'vnj-memberspace', get_template_directory_uri() . '/assets/js/memberspace.js', array(), '20151216', true );
+	#wp_enqueue_script( 'paypal', get_template_directory_uri() . '/assets/js/paypal.js', array(), '20151216', true );
 
 
+	#wp_enqueue_script( 'paypal_sdk', "https://www.paypal.com/sdk/js?client-id=AWVTdMqy7GbtJztxGsVqquUo3HX-UdVyVhqSSq_a6PByf-hoqaVfm9Y3cWTvyFKdUPEowHe2WQmdJvFi&vault=true&locale=fr_FR&currency=EUR");
+
+	
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
 add_action( 'wp_enqueue_scripts', 'hamzahshop_scripts' );
+
+add_filter( 'script_loader_tag', 'add_id_to_script', 10, 3 );
+
+function add_id_to_script( $tag, $handle, $source ) {
+    if ( 'paypal_sdk' === $handle ) {
+        $tag = '<script type="text/javascript" src="' . $source . '" data-namespace="paypal_sdk"></script>';
+    }
+
+    return $tag;
+}
+
 
 /**
  * Implement the Custom Header feature.
